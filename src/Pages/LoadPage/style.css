@@ -1,0 +1,30 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.appWrap {
+    width: 100%;
+    height: 100%;
+}
+
+.mainBackground {
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/double-bubble-outline.png');
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.mainColor {
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(rgba(51, 50, 50, 0.322), rgb(95, 159, 161));
+}

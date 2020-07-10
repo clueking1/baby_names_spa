@@ -20,7 +20,7 @@ export default {
             headers: { 'content-type': 'application/json',
             "Access-Control-Allow-Origin" : "*"
         },
-            url: '/tables',
+            url: '/api/tables',
             credentials : 'same-origin',
             data: postData
         })
@@ -43,9 +43,10 @@ export default {
         return axios({
             method: 'post',
             headers: { 'content-type': 'application/json',
-            "Access-Control-Allow-Origin" : "*"
+            "Access-Control-Allow-Origin" : "*",
+
         },
-            url: '/newTable',
+            url: 'api/newTable',
             credentials : 'same-origin',
             data: postData
         })
