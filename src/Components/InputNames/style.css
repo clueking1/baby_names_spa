@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.inputDiv {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px white solid;
+}
+
+.nameIn {
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nameIn:focus {
+    outline: none;
+}
+
+.inputDiv button {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(214, 209, 209) solid;
+    cursor: pointer;
+    color: rgb(9, 107, 146);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inputDiv button:focus {
+    outline: none;
+}
