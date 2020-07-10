@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.nameDiv {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.name {
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px white solid;
+    margin: 10px 20px;
+    color: rgb(17, 105, 105);
+    background-color: white;
+}
