@@ -1,3 +1,26 @@
-.title {
-    margin-top: 0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.titleDiv {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color:  rgb(254, 255, 255);
+    text-align: center;
 }
+
+.title {
+    border: 1px white solid;
+    background-color: rgba(68, 87, 92, 0.349);
+    margin-top: 0;
+    width: 60vw;
+    margin:0 auto;
+    font-size: 8vw;
+    padding: 50px;
+    box-shadow: 8px 3px 15px 10px #426e746c
+}
+
+@media only screen and (max-width: 500px) {
+    .title {
+        width: 70vw;
+        font-size: 10vw;
+    }
+  }
