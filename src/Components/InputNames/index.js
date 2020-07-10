@@ -4,17 +4,8 @@ import './style.css'
 //API Import
 import API from '../../Utils/API'
 
-function InputNames() {
+function InputNames(props) {
     const [name, setName] = useState('')
-
-    function submit() {
-        API.newName({
-            name : name
-        })
-        .then(res => {
-            
-        })
-    }
 
     return (
         <div className="inputDiv">
@@ -25,7 +16,7 @@ function InputNames() {
             <br />
             <button 
                 type="submit"
-                onClick={() => submit()}
+                onClick={() => props.addName(name)}
             >Submit Name!</button>
         </div>
         
