@@ -10,7 +10,7 @@ import Name from '../../Components/NameDisplay'
 import API from '../../Utils/API'
 
 function MainPage(props) {
-    const [names, setNames] = useState({})
+    const [names, setNames] = useState()
     useEffect(() => {
         console.log(props.computedMatch.params.id)
         API.namesTables()
@@ -25,7 +25,7 @@ function MainPage(props) {
             <div className="mainColor">
                 <Title />
                 <Input />
-                <Name names={names}/>
+                {names !== undefined ?<Name names={names}/>:undefined}
             </div>  
         </div>
     )
