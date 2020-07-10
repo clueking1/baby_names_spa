@@ -2,6 +2,7 @@ import axios from "axios";
 
 export default {
 // Get Routes
+    //Gets all names from the specfic table
     names: function(postData) {
         return axios({
             method: 'get',
@@ -13,18 +14,9 @@ export default {
             data: postData
         })
       },
-    table: function(postData) {
-        return axios({
-            method: 'get',
-            headers: { 'content-type': 'application/json',
-            "Access-Control-Allow-Origin" : "*"
-        },
-            url: '/table',
-            credentials : 'same-origin',
-            data: postData
-        })
-    },
+     
 // Post Routes
+    //inputs new names the user submits to the database
     newName: function(postData) {
         return axios({
             method: 'post',
