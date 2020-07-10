@@ -11,6 +11,9 @@ function InputNames() {
         API.newName({
             name : name
         })
+        .then(res => {
+            
+        })
     }
 
     return (
