@@ -3,29 +3,18 @@ import axios from "axios";
 export default {
 // Get Routes
     //Gets all names from the specfic table
-    names: function(postData) {
+    namesTables: function(postData) {
         return axios({
             method: 'get',
             headers: { 'content-type': 'application/json',
             "Access-Control-Allow-Origin" : "*"
         },
-            url: '/names',
+            url: 'api/namesTables',
             credentials : 'same-origin',
             data: postData
         })
     },
-    tables: function(postData) {
-        return axios({
-            method: 'get',
-            headers: { 'content-type': 'application/json',
-            "Access-Control-Allow-Origin" : "*"
-        },
-            url: '/api/tables',
-            credentials : 'same-origin',
-            data: postData
-        })
-    },
-     
+
 // Post Routes
     //inputs new names the user submits to the database
     newName: function(postData) {
@@ -41,7 +30,7 @@ export default {
     }, 
     newTable: function(postData) {
         return axios({
-            method: 'post',
+            method: 'get',
             headers: { 'content-type': 'application/json',
             "Access-Control-Allow-Origin" : "*",
 
