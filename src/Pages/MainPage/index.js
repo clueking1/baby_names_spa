@@ -13,7 +13,6 @@ function MainPage(props) {
     const [names, setNames] = useState()
     const [toggle, setToggle] = useState(false)
     useEffect(() => {
-        //console.log(props.computedMatch.params.id)
         API.namesTables({
             table: props.computedMatch.params.id
         })
@@ -43,7 +42,12 @@ function MainPage(props) {
             alert('Names may not have more that two spaces!')
             return 
          }
-        //if (props.computedMatch.params.id)
+         let check = names.filter(t => t.name === formattedName)
+         if (check.length !== 0) {
+            alert('May not have duplicate names!')
+            return 
+         }
+
          API.newNameTable({
             name: formattedName,
             table : props.computedMatch.params.id
@@ -52,11 +56,13 @@ function MainPage(props) {
             setToggle(!toggle)
          })
     }
+
     return (
         <div className="mainBackground">
             <div className="mainColor">
                 <Title />
                 <Input addName = {addName}/>
+                
                 {names !== undefined ?<Name names={names}/>:undefined}
             </div>  
         </div>

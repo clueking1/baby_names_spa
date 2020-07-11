@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import './style.css'
 
-//API Import
-import API from '../../Utils/API'
-
 function InputNames(props) {
     const [name, setName] = useState('')
 
